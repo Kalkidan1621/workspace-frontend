@@ -1,0 +1,14 @@
+import {
+  createFileRoute,
+  Outlet,
+} from "@tanstack/react-router";
+
+export const Route = createFileRoute(
+  "/admin/applications",
+)({
+  component: AdminApplicationsLayout,
+});
+
+function AdminApplicationsLayout() {
+  return <Outlet />;
+}

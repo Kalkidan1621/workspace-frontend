@@ -1,0 +1,875 @@
+/* =========================================
+   PAGE
+========================================= */
+
+.admin-job-details-page {
+  min-height: calc(100vh - 70px);
+  background: #f6f8fb;
+  padding: 32px;
+}
+
+.admin-job-details-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   BACK
+========================================= */
+
+.admin-job-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 20px;
+
+  color: #52627a;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.admin-job-back-link:hover {
+  color: #08a9df;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.admin-job-hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 28px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf1;
+  border-radius: 16px;
+
+  box-shadow:
+    0 2px 8px rgba(20, 40, 70, 0.04);
+
+  margin-bottom: 16px;
+}
+
+.admin-job-hero-icon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #e8f7fc;
+
+  font-size: 26px;
+
+  flex-shrink: 0;
+}
+
+.admin-job-hero-content {
+  flex: 1;
+}
+
+.admin-job-eyebrow {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #72829a;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.admin-job-hero h1 {
+  margin: 0;
+
+  color: #17263d;
+
+  font-size: 27px;
+  line-height: 1.25;
+}
+
+.admin-job-meta {
+  display: flex;
+  gap: 8px;
+
+  margin: 7px 0 0;
+
+  color: #74839a;
+
+  font-size: 14px;
+}
+
+.admin-job-status {
+  padding: 9px 17px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-job-status-active {
+  color: #13834b;
+  background: #e7f8ef;
+}
+
+.admin-job-status-inactive {
+  color: #697586;
+  background: #edf0f4;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.admin-job-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 6px;
+
+  margin-bottom: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf1;
+  border-radius: 14px;
+
+  box-shadow:
+    0 2px 8px rgba(20, 40, 70, 0.03);
+}
+
+.admin-job-tab {
+  position: relative;
+
+  border: none;
+  background: transparent;
+
+  padding: 12px 21px;
+
+  border-radius: 9px;
+
+  color: #596a81;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-job-tab:hover {
+  color: #08a9df;
+  background: #f1faff;
+}
+
+.admin-job-tab.active {
+  color: #009ed5;
+  background: #e8f7fc;
+}
+
+.candidate-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 20px;
+  height: 20px;
+
+  margin-left: 7px;
+  padding: 0 5px;
+
+  border-radius: 999px;
+
+  color: #008fca;
+  background: #d8f2fb;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   TAB CONTENT
+========================================= */
+
+.job-tab-content {
+  width: 100%;
+}
+
+.job-section-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf1;
+  border-radius: 16px;
+
+  box-shadow:
+    0 2px 8px rgba(20, 40, 70, 0.04);
+}
+
+.job-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 26px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.job-card-header h2 {
+  margin: 0 0 5px;
+
+  color: #24344d;
+
+  font-size: 19px;
+}
+
+.job-card-header p {
+  margin: 0;
+
+  color: #8290a3;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.job-description {
+  padding: 26px;
+}
+
+.job-description p {
+  margin: 0;
+
+  color: #52627a;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  white-space: pre-line;
+}
+
+.empty-text {
+  color: #9aa6b5 !important;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.job-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-top: 16px;
+}
+
+.job-summary-item {
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf1;
+  border-radius: 13px;
+}
+
+.job-summary-item span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #8a97a9;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.job-summary-item strong {
+  color: #293a53;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   JOB INFORMATION
+========================================= */
+
+.job-information-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 0;
+}
+
+.job-information-item {
+  min-height: 100px;
+
+  padding: 21px 25px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.job-information-item:nth-child(odd) {
+  border-right: 1px solid #edf1f5;
+}
+
+.job-information-item span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #8a97a9;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.job-information-item strong {
+  color: #293a53;
+
+  font-size: 15px;
+}
+
+.priority-value {
+  text-transform: capitalize;
+}
+
+
+/* =========================================
+   CANDIDATES
+========================================= */
+
+.candidate-total {
+  padding: 8px 13px;
+
+  border-radius: 8px;
+
+  color: #008fca;
+  background: #e8f7fc;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.candidate-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.candidate-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 850px;
+}
+
+.candidate-table th {
+  padding: 15px 18px;
+
+  background: #f8fafc;
+
+  color: #718096;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-align: left;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.candidate-table td {
+  padding: 17px 18px;
+
+  color: #596a81;
+
+  font-size: 13px;
+
+  border-top: 1px solid #edf1f5;
+}
+
+.candidate-table tbody tr:hover {
+  background: #fbfdff;
+}
+
+.candidate-name {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.candidate-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #008fca;
+  background: #e5f6fc;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.candidate-name strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #2a3b55;
+
+  font-size: 14px;
+}
+
+.candidate-name span {
+  color: #96a1af;
+
+  font-size: 11px;
+}
+
+.candidate-contact span {
+  display: block;
+
+  margin-bottom: 3px;
+}
+
+.candidate-resume {
+  color: #52719f;
+
+  font-weight: 600;
+}
+
+.candidate-status {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.candidate-status-pending {
+  color: #9a6900;
+  background: #fff3cf;
+}
+
+.candidate-status-approved {
+  color: #137c49;
+  background: #e3f7ed;
+}
+
+.candidate-status-rejected {
+  color: #b13d48;
+  background: #fde9eb;
+}
+
+
+/* =========================================
+   CANDIDATE EMPTY / ERROR
+========================================= */
+
+.candidate-empty {
+  padding: 65px 20px;
+
+  text-align: center;
+}
+
+.candidate-empty-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+
+  background: #f0f4f8;
+
+  font-size: 22px;
+}
+
+.candidate-empty h3 {
+  margin: 0 0 7px;
+
+  color: #34445b;
+
+  font-size: 17px;
+}
+
+.candidate-empty p {
+  margin: 0;
+
+  color: #8b98a9;
+
+  font-size: 13px;
+}
+
+.candidate-error {
+  margin: 20px;
+
+  padding: 18px;
+
+  border-radius: 10px;
+
+  color: #9f3743;
+  background: #fff0f1;
+}
+
+.candidate-error strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.candidate-error p {
+  margin: 0;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   EMPLOYER
+========================================= */
+
+.employer-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 27px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.employer-logo {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  color: #ffffff;
+  background: #08a9df;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.employer-profile h2 {
+  margin: 0 0 4px;
+
+  color: #263750;
+
+  font-size: 19px;
+}
+
+.employer-profile p {
+  margin: 0;
+
+  color: #8290a3;
+
+  font-size: 13px;
+}
+
+.employer-verified {
+  margin-left: auto;
+
+  padding: 8px 12px;
+
+  border-radius: 999px;
+
+  color: #147d4c;
+  background: #e5f8ee;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.employer-information-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+}
+
+.employer-information-grid > div {
+  padding: 21px 26px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.employer-information-grid > div:nth-child(odd) {
+  border-right: 1px solid #edf1f5;
+}
+
+.employer-information-grid span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #8b98a9;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.employer-information-grid strong {
+  color: #35465e;
+
+  font-size: 14px;
+}
+
+.employer-description {
+  padding: 25px 26px;
+}
+
+.employer-description h3 {
+  margin: 0 0 9px;
+
+  color: #35465e;
+
+  font-size: 16px;
+}
+
+.employer-description p {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #66768c;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.admin-job-loading,
+.candidate-loading {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  color: #718096;
+}
+
+.admin-job-spinner {
+  width: 30px;
+  height: 30px;
+
+  border: 3px solid #e2e8f0;
+  border-top-color: #08a9df;
+
+  border-radius: 50%;
+
+  animation:
+    admin-job-spin 0.8s linear infinite;
+}
+
+@keyframes admin-job-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   ERROR PAGE
+========================================= */
+
+.admin-job-error {
+  max-width: 500px;
+
+  margin: 80px auto;
+
+  padding: 35px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf1;
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.admin-job-error h2 {
+  margin: 0 0 8px;
+
+  color: #263750;
+}
+
+.admin-job-error p {
+  color: #78869a;
+}
+
+.admin-job-error button {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  color: #ffffff;
+  background: #08a9df;
+
+  font-family: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admin-job-details-page {
+    padding: 20px;
+  }
+
+  .job-summary-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .admin-job-details-page {
+    padding: 14px;
+  }
+
+  .admin-job-hero {
+    align-items: flex-start;
+  }
+
+  .admin-job-status {
+    display: none;
+  }
+
+  .admin-job-hero h1 {
+    font-size: 21px;
+  }
+
+  .admin-job-meta {
+    flex-wrap: wrap;
+  }
+
+  .admin-job-tabs {
+    overflow-x: auto;
+  }
+
+  .admin-job-tab {
+    white-space: nowrap;
+  }
+
+  .job-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-information-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-information-item:nth-child(odd) {
+    border-right: none;
+  }
+
+  .employer-information-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employer-information-grid > div:nth-child(odd) {
+    border-right: none;
+  }
+
+  .employer-profile {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .employer-verified {
+    margin-left: 0;
+  }
+
+}
+.candidate-name-link {
+  display: block;
+  color: #1f2937;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.candidate-name-link:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}

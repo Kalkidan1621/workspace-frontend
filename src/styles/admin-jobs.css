@@ -1,0 +1,1216 @@
+/* =========================================================
+   ADMIN JOBS PAGE
+   Professional recruitment dashboard
+   ========================================================= */
+
+.admin-jobs-page {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background: #f6f8fb;
+  padding: 28px 32px 40px;
+  color: #172033;
+}
+
+.admin-jobs-container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.admin-jobs-header {
+  width: 100%;
+  min-height: 112px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 26px 30px;
+
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.admin-jobs-eyebrow {
+  margin: 0 0 7px;
+
+  font-size: 11px;
+  line-height: 1.4;
+
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  color: #179fd0;
+}
+
+.admin-jobs-header h1 {
+  margin: 0;
+
+  font-size: 26px;
+  line-height: 1.25;
+
+  font-weight: 700;
+  letter-spacing: -0.3px;
+
+  color: #172033;
+}
+
+.admin-jobs-subtitle {
+  margin: 7px 0 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #7b8798;
+}
+
+/* =========================================================
+   CREATE JOB BUTTON
+   ========================================================= */
+
+.admin-create-job-button {
+  flex-shrink: 0;
+
+  min-height: 44px;
+  padding: 0 19px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #119fd2;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 10px rgba(17, 159, 210, 0.18);
+
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.admin-create-job-button span {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.admin-create-job-button:hover {
+  background: #0d8fbe;
+
+  box-shadow:
+    0 6px 14px rgba(17, 159, 210, 0.24);
+
+  transform: translateY(-1px);
+}
+
+.admin-create-job-button:active {
+  transform: translateY(0);
+}
+
+.admin-create-job-button:focus-visible {
+  outline: 3px solid rgba(17, 159, 210, 0.22);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.admin-jobs-message {
+  margin-top: 20px;
+
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+.admin-jobs-error {
+  border: 1px solid #fecaca;
+  background: #fff7f7;
+  color: #991b1b;
+}
+
+.admin-jobs-error strong {
+  font-weight: 700;
+}
+
+.admin-jobs-error span {
+  color: #b42318;
+}
+
+/* =========================================================
+   JOB LIST SECTION
+   ========================================================= */
+
+.admin-jobs-list {
+  width: 100%;
+  margin-top: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 7px rgba(15, 23, 42, 0.035);
+}
+
+/* =========================================================
+   LIST HEADER
+   ========================================================= */
+
+.admin-jobs-list-header {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 24px;
+
+  border-bottom: 1px solid #e8edf3;
+
+  box-sizing: border-box;
+}
+
+.admin-jobs-list-header h2 {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  color: #1b2638;
+}
+
+.admin-jobs-list-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #8792a3;
+}
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.admin-job-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.admin-job-table {
+  width: 100%;
+  min-width: 980px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  table-layout: auto;
+}
+
+.admin-job-table thead {
+  background: #f7f9fc;
+}
+
+.admin-job-table th {
+  height: 52px;
+
+  padding: 0 20px;
+
+  text-align: left;
+  vertical-align: middle;
+
+  border-bottom: 1px solid #e4e9f0;
+
+  font-size: 11px;
+  line-height: 1.3;
+
+  font-weight: 700;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+
+  color: #66758a;
+
+  white-space: nowrap;
+}
+
+.admin-job-table td {
+  min-height: 72px;
+
+  padding: 17px 20px;
+
+  border-bottom: 1px solid #edf1f5;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #536176;
+
+  vertical-align: middle;
+}
+
+.admin-job-table tbody tr {
+  background: #ffffff;
+
+  transition:
+    background-color 0.15s ease;
+}
+
+.admin-job-table tbody tr:hover {
+  background: #f9fbfd;
+}
+
+.admin-job-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* =========================================================
+   POSITION
+   ========================================================= */
+
+.admin-job-title {
+  min-width: 220px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-job-title strong {
+  display: block;
+
+  color: #26364c;
+
+  font-size: 14px;
+  line-height: 1.45;
+
+  font-weight: 650;
+}
+
+.admin-job-title span {
+  display: block;
+
+  color: #9aa5b4;
+
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   DEPARTMENT
+   ========================================================= */
+
+.admin-job-department {
+  display: inline-block;
+
+  max-width: 190px;
+
+  color: #536176;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.admin-job-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  white-space: nowrap;
+
+  color: #536176;
+}
+
+.admin-job-location > span {
+  color: #8b98a9;
+  font-size: 15px;
+}
+
+/* =========================================================
+   EMPLOYMENT TYPE
+   ========================================================= */
+
+.admin-job-table td:nth-child(4) {
+  white-space: nowrap;
+
+  color: #5d6b7e;
+  font-weight: 500;
+}
+
+/* =========================================================
+   PRIORITY BADGES
+   ========================================================= */
+
+.admin-job-priority {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 62px;
+  height: 27px;
+
+  padding: 0 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  line-height: 1;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+/* Low */
+
+.admin-job-priority-low {
+  background: #eef6ff;
+  color: #3974b9;
+}
+
+/* Medium */
+
+.admin-job-priority-medium {
+  background: #fff6dc;
+  color: #9a7200;
+}
+
+/* High */
+
+.admin-job-priority-high {
+  background: #fff0f0;
+  color: #c24141;
+}
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+
+.admin-view-job-button {
+  min-width: 70px;
+  height: 34px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d8e0ea;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #147da5;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease,
+    transform 0.16s ease;
+}
+
+.admin-view-job-button:hover {
+  background: #edf8fc;
+  border-color: #a9d9e9;
+  color: #08769c;
+
+  transform: translateY(-1px);
+}
+
+.admin-view-job-button:active {
+  transform: translateY(0);
+}
+
+.admin-view-job-button:focus-visible {
+  outline: 3px solid rgba(17, 159, 210, 0.18);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.admin-jobs-empty {
+  width: 100%;
+
+  margin-top: 22px;
+  padding: 70px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+
+  box-sizing: border-box;
+}
+
+.admin-jobs-empty-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: #eaf8fc;
+  color: #119fd2;
+
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.admin-jobs-empty h2 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #26364c;
+}
+
+.admin-jobs-empty p {
+  margin: 8px 0 22px;
+
+  font-size: 14px;
+
+  color: #8490a1;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.admin-jobs-loading {
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+}
+
+.admin-jobs-loading p {
+  margin: 15px 0 0;
+
+  color: #7c899a;
+
+  font-size: 14px;
+}
+
+/* Spinner */
+
+.admin-jobs-spinner {
+  width: 34px;
+  height: 34px;
+
+  border: 3px solid #e4edf2;
+  border-top-color: #119fd2;
+
+  border-radius: 50%;
+
+  animation: adminJobsSpin 0.8s linear infinite;
+}
+
+@keyframes adminJobsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.admin-job-table-wrapper::-webkit-scrollbar {
+  height: 7px;
+}
+
+.admin-job-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f4f7;
+}
+
+.admin-job-table-wrapper::-webkit-scrollbar-thumb {
+  background: #c8d1dc;
+  border-radius: 999px;
+}
+
+.admin-job-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #aeb9c7;
+}
+
+/* =========================================================
+   LARGE SCREEN
+   ========================================================= */
+
+@media (min-width: 1400px) {
+  .admin-jobs-page {
+    padding: 32px 40px 46px;
+  }
+
+  .admin-jobs-header {
+    padding: 28px 32px;
+  }
+
+  .admin-job-table th,
+  .admin-job-table td {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .admin-jobs-page {
+    padding: 22px 20px 32px;
+  }
+
+  .admin-jobs-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .admin-create-job-button {
+    width: auto;
+  }
+
+  .admin-jobs-list-header {
+    padding: 17px 20px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .admin-jobs-page {
+    padding: 16px 12px 28px;
+  }
+
+  .admin-jobs-header {
+    min-height: auto;
+
+    padding: 20px;
+
+    border-radius: 11px;
+  }
+
+  .admin-jobs-header h1 {
+    font-size: 22px;
+  }
+
+  .admin-jobs-subtitle {
+    font-size: 13px;
+  }
+
+  .admin-create-job-button {
+    width: 100%;
+  }
+
+  .admin-jobs-list {
+    margin-top: 16px;
+
+    border-radius: 11px;
+  }
+
+  .admin-jobs-list-header {
+    min-height: 72px;
+
+    padding: 16px;
+  }
+
+  .admin-jobs-list-header h2 {
+    font-size: 16px;
+  }
+
+  .admin-job-table {
+    min-width: 900px;
+  }
+
+  .admin-job-table th,
+  .admin-job-table td {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .admin-jobs-empty {
+    padding: 55px 20px;
+  }
+}
+/* =========================================================
+   EMPLOYER SELECT
+   ========================================================= */
+
+.admin-job-field select {
+  width: 100%;
+  min-height: 44px;
+
+  padding: 0 42px 0 14px;
+
+  border: 1px solid #d9e1ea;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+
+  color: #26364c;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  outline: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #718096 50%),
+    linear-gradient(135deg, #718096 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 18px) 18px,
+    calc(100% - 13px) 18px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+/* Hover */
+
+.admin-job-field select:hover:not(:disabled) {
+  border-color: #b9c7d6;
+  background-color: #fcfdff;
+}
+
+/* Focus */
+
+.admin-job-field select:focus {
+  border-color: #119fd2;
+
+  box-shadow:
+    0 0 0 3px rgba(17, 159, 210, 0.12);
+}
+
+/* Disabled */
+
+.admin-job-field select:disabled {
+  background-color: #f5f7fa;
+  color: #8a96a6;
+
+  cursor: not-allowed;
+
+  opacity: 0.85;
+}
+
+/* Placeholder option */
+
+.admin-job-field select option[value=""] {
+  color: #8a96a6;
+}
+
+/* Normal options */
+
+.admin-job-field select option {
+  color: #26364c;
+  background: #ffffff;
+}
+
+/* =========================================================
+   EMPLOYER FIELD ERROR
+   ========================================================= */
+
+.admin-job-field .admin-field-error {
+  margin: 6px 0 0;
+
+  color: #b42318;
+
+  font-size: 12px;
+  line-height: 1.45;
+
+  font-weight: 500;
+}
+
+/* Invalid select */
+
+.admin-job-field select[aria-invalid="true"] {
+  border-color: #e25555;
+
+  background-color: #fffafa;
+}
+
+.admin-job-field select[aria-invalid="true"]:focus {
+  border-color: #e25555;
+
+  box-shadow:
+    0 0 0 3px rgba(226, 85, 85, 0.12);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .admin-job-field select {
+    min-height: 46px;
+
+    padding-left: 13px;
+    padding-right: 40px;
+
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   CREATE JOB FORM
+   ========================================================= */
+.admin-jobs-form-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+  overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-jobs-header {
+  padding: 34px 40px 30px;
+  border-bottom: 1px solid #edf0f4;
+  background: #ffffff;
+}
+
+.admin-jobs-eyebrow {
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #2563eb;
+}
+
+.admin-jobs-header h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+
+.admin-jobs-header > p:last-child {
+  margin: 10px 0 0;
+  max-width: 680px;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.admin-jobs-form-card form {
+  padding: 34px 40px 40px;
+}
+
+/* =========================================================
+   FIELD
+   Both class names are supported:
+   .admin-job-field
+   .admin-jobs-field
+========================================================= */
+
+.admin-job-field,
+.admin-jobs-field {
+  margin-bottom: 23px;
+}
+
+.admin-job-field label,
+.admin-jobs-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1f2937;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 650;
+}
+
+.admin-job-field input,
+.admin-job-field select,
+.admin-job-field textarea,
+.admin-jobs-field input,
+.admin-jobs-field select,
+.admin-jobs-field textarea {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+
+  border: 1px solid #d7dce3;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.admin-job-field input,
+.admin-job-field select,
+.admin-jobs-field input,
+.admin-jobs-field select {
+  height: 46px;
+  padding: 0 13px;
+}
+
+.admin-job-field textarea,
+.admin-jobs-field textarea {
+  min-height: 170px;
+  padding: 13px 14px;
+  resize: vertical;
+}
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.admin-job-field input::placeholder,
+.admin-job-field textarea::placeholder,
+.admin-jobs-field input::placeholder,
+.admin-jobs-field textarea::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.admin-job-field input:focus,
+.admin-job-field select:focus,
+.admin-job-field textarea:focus,
+.admin-jobs-field input:focus,
+.admin-jobs-field select:focus,
+.admin-jobs-field textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.11);
+}
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+.admin-job-field select:disabled,
+.admin-jobs-field select:disabled {
+  cursor: not-allowed;
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.admin-job-field select,
+.admin-jobs-field select {
+  cursor: pointer;
+}
+
+/* =========================================================
+   VALIDATION ERROR
+========================================================= */
+
+.admin-job-field input[aria-invalid="true"],
+.admin-job-field select[aria-invalid="true"],
+.admin-job-field textarea[aria-invalid="true"],
+.admin-jobs-field input[aria-invalid="true"],
+.admin-jobs-field select[aria-invalid="true"],
+.admin-jobs-field textarea[aria-invalid="true"] {
+  border-color: #ef4444;
+}
+
+.admin-job-field input[aria-invalid="true"]:focus,
+.admin-job-field select[aria-invalid="true"]:focus,
+.admin-job-field textarea[aria-invalid="true"]:focus,
+.admin-jobs-field input[aria-invalid="true"]:focus,
+.admin-jobs-field select[aria-invalid="true"]:focus,
+.admin-jobs-field textarea[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.admin-field-error {
+  margin: 7px 0 0;
+  color: #dc2626;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   SUCCESS / SUBMIT ERROR
+========================================================= */
+
+.admin-job-success,
+.admin-job-error {
+  margin: 18px 0;
+  padding: 13px 15px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-job-success {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.admin-job-error {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* =========================================================
+   CREATE BUTTON
+========================================================= */
+
+.create-job-button {
+  width: 100%;
+  min-height: 48px;
+
+  margin-top: 7px;
+  padding: 0 20px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.create-job-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  box-shadow: 0 7px 18px rgba(37, 99, 235, 0.2);
+  transform: translateY(-1px);
+}
+
+.create-job-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.create-job-button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.15),
+    0 7px 18px rgba(37, 99, 235, 0.18);
+}
+
+.create-job-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   DATE INPUT
+========================================================= */
+
+.admin-job-field input[type="date"],
+.admin-jobs-field input[type="date"] {
+  cursor: pointer;
+}
+
+/* =========================================================
+   TEXTAREA SCROLLBAR
+========================================================= */
+
+.admin-job-field textarea::-webkit-scrollbar,
+.admin-jobs-field textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.admin-job-field textarea::-webkit-scrollbar-track,
+.admin-jobs-field textarea::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.admin-job-field textarea::-webkit-scrollbar-thumb,
+.admin-jobs-field textarea::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .admin-jobs-page {
+    padding: 24px 16px 45px;
+  }
+
+  .admin-jobs-header {
+    padding: 27px 24px 24px;
+  }
+
+  .admin-jobs-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-jobs-form-card form {
+    padding: 27px 24px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-jobs-page {
+    padding: 14px 10px 30px;
+  }
+
+  .admin-jobs-form-card {
+    border-radius: 13px;
+  }
+
+  .admin-jobs-header {
+    padding: 22px 18px;
+  }
+
+  .admin-jobs-header h1 {
+    font-size: 23px;
+  }
+
+  .admin-jobs-header > p:last-child {
+    font-size: 13px;
+  }
+
+  .admin-jobs-form-card form {
+    padding: 22px 18px 25px;
+  }
+
+  .admin-job-field,
+  .admin-jobs-field {
+    margin-bottom: 19px;
+  }
+
+  .admin-job-field input,
+  .admin-job-field select,
+  .admin-jobs-field input,
+  .admin-jobs-field select {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .admin-job-field textarea,
+  .admin-jobs-field textarea {
+    min-height: 150px;
+    font-size: 13px;
+  }
+
+  .create-job-button {
+    min-height: 46px;
+  }
+}

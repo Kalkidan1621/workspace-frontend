@@ -1,0 +1,181 @@
+.candidate-cv-page {
+  min-height: calc(100vh - 72px);
+  background: #f5f7fa;
+  padding: 32px 20px;
+}
+
+.candidate-cv-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.candidate-cv-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.candidate-cv-back {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #12a8df;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.candidate-cv-back:hover {
+  text-decoration: underline;
+}
+
+.candidate-cv-eyebrow {
+  margin: 0 0 6px;
+  color: #12a8df;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.candidate-cv-header h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 30px;
+}
+
+.candidate-cv-header p:last-child {
+  margin: 7px 0 0;
+  color: #687386;
+  font-size: 14px;
+}
+
+.candidate-cv-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #12a8df;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.candidate-cv-open:hover {
+  background: #0e96c7;
+}
+
+/* ============================= */
+/* CANDIDATE INFO */
+/* ============================= */
+
+.candidate-cv-info {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid #e1e6ed;
+  border-radius: 10px;
+  background: #e1e6ed;
+}
+
+.candidate-cv-info > div {
+  padding: 16px 18px;
+  background: #ffffff;
+}
+
+.candidate-cv-info span {
+  display: block;
+  margin-bottom: 5px;
+  color: #7a8494;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.candidate-cv-info strong {
+  color: #202938;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* CV PREVIEW */
+/* ============================= */
+
+.candidate-cv-preview-section {
+  overflow: hidden;
+  border: 1px solid #dfe4ea;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.candidate-cv-frame {
+  display: block;
+  width: 100%;
+  height: 850px;
+  border: 0;
+}
+
+/* ============================= */
+/* STATES */
+/* ============================= */
+
+.candidate-cv-state {
+  width: min(600px, 100%);
+  margin: 80px auto;
+  padding: 40px 30px;
+  border: 1px solid #e1e6ed;
+  border-radius: 12px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.candidate-cv-state h1 {
+  margin: 0 0 10px;
+  color: #172033;
+  font-size: 24px;
+}
+
+.candidate-cv-state p {
+  margin: 0 0 20px;
+  color: #687386;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 700px) {
+  .candidate-cv-page {
+    padding: 20px 12px;
+  }
+
+  .candidate-cv-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .candidate-cv-header h1 {
+    font-size: 25px;
+  }
+
+  .candidate-cv-info {
+    grid-template-columns: 1fr;
+  }
+
+  .candidate-cv-frame {
+    height: 700px;
+  }
+
+  .candidate-cv-open {
+    width: 100%;
+  }
+}

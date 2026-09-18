@@ -1,0 +1,382 @@
+/* =========================================================
+   Job Application Page
+   ========================================================= */
+
+.job-application-page {
+  min-height: 100vh;
+  padding: 55px 20px 80px;
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(64, 89, 140, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #f5f7fb 0%,
+      #eef2f7 100%
+    );
+  color: #243452;
+}
+
+
+/* =========================================================
+   Container
+   ========================================================= */
+
+.job-application-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   Application Card
+   ========================================================= */
+
+.job-application-card {
+  padding: 38px;
+  border: 1px solid #dce3ee;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow:
+    0 12px 35px rgba(31, 42, 68, 0.08);
+}
+
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.job-application-card h1 {
+  margin: 0;
+  color: #1f2a44;
+  font-size: 32px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.job-application-card > p {
+  margin: 10px 0 30px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   Form
+   ========================================================= */
+
+.job-application-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* =========================================================
+   Field
+   ========================================================= */
+
+.application-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+/* =========================================================
+   Labels
+   ========================================================= */
+
+.application-field label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   Inputs
+   ========================================================= */
+
+.application-field input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 48px;
+  padding: 12px 14px;
+
+  border: 1px solid #cfd7e4;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #243452;
+
+  font: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Placeholder */
+
+.application-field input::placeholder {
+  color: #9aa5b5;
+}
+
+
+/* Focus */
+
+.application-field input:focus {
+  border-color: #52699b;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 4px
+    rgba(82, 105, 155, 0.12);
+}
+
+
+/* =========================================================
+   Invalid Input
+   ========================================================= */
+
+.application-field input[aria-invalid="true"] {
+  border-color: #d9534f;
+  background: #fffafa;
+}
+
+.application-field input[aria-invalid="true"]:focus {
+  border-color: #d9534f;
+  box-shadow:
+    0 0 0 4px
+    rgba(217, 83, 79, 0.10);
+}
+
+
+/* =========================================================
+   File Input
+   ========================================================= */
+
+.application-field input[type="file"] {
+  min-height: auto;
+  padding: 10px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.application-field input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 9px 13px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #40598c;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.application-field input[type="file"]::file-selector-button:hover {
+  background: #314875;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   Validation Error
+   ========================================================= */
+
+.field-error {
+  margin: 2px 0 0;
+  color: #c53f3b;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   Submit Button
+   ========================================================= */
+
+.job-application-card button[type="submit"] {
+  width: 100%;
+  min-height: 50px;
+
+  margin-top: 5px;
+  padding: 13px 20px;
+
+  border: none;
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #40598c,
+      #52699b
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px
+    rgba(64, 89, 140, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Hover */
+
+.job-application-card button[type="submit"]:hover:not(:disabled) {
+  background:
+    linear-gradient(
+      135deg,
+      #344b7b,
+      #465c91
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px
+    rgba(64, 89, 140, 0.28);
+}
+
+
+/* Active */
+
+.job-application-card button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+/* Disabled */
+
+.job-application-card button[type="submit"]:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   Success / Error Message
+   ========================================================= */
+
+.application-message {
+  margin: 22px 0 0;
+  padding: 13px 15px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+
+/* Success */
+
+.application-message.success {
+  border: 1px solid #a9ddbd;
+  background: #effaf3;
+  color: #267144;
+}
+
+
+/* Error */
+
+.application-message.error {
+  border: 1px solid #efb8b6;
+  background: #fff4f3;
+  color: #b9403e;
+}
+
+
+/* =========================================================
+   Responsive - Tablet
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .job-application-page {
+    padding: 35px 16px 60px;
+  }
+
+  .job-application-card {
+    padding: 30px 25px;
+  }
+
+  .job-application-card h1 {
+    font-size: 28px;
+  }
+}
+
+
+/* =========================================================
+   Responsive - Mobile
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .job-application-page {
+    padding: 20px 12px 45px;
+  }
+
+  .job-application-container {
+    max-width: 100%;
+  }
+
+  .job-application-card {
+    padding: 24px 18px;
+    border-radius: 14px;
+  }
+
+  .job-application-card h1 {
+    font-size: 25px;
+  }
+
+  .job-application-card > p {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  .job-application-card form {
+    gap: 17px;
+  }
+
+  .application-field input {
+    min-height: 46px;
+    font-size: 14px;
+  }
+
+  .job-application-card button[type="submit"] {
+    min-height: 48px;
+  }
+}
